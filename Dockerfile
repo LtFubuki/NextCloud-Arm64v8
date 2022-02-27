@@ -153,5 +153,7 @@ RUN set -ex; \
 COPY *.sh upgrade.exclude /
 COPY config/* /usr/src/nextcloud/config/
 
+RUN chmod 777 /entrypoint.sh
+
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["apache2-foreground"]
