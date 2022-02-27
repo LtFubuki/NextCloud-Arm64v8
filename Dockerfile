@@ -155,5 +155,7 @@ COPY config/* /usr/src/nextcloud/config/
 
 RUN chmod 777 /entrypoint.sh
 
+RUN chmod 777 /cron.sh
+
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["apache2-foreground"]
